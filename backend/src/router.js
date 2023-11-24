@@ -8,5 +8,6 @@ router.post("/login", loginControl.getAll);
 
 router.get("/getCliente", clienteControl.getAll);
 router.post("/postCliente", clienteControl.postCliente);
+router.delete("/deleteCliente", clienteControl.deleteCliente);
 
 module.exports = router;

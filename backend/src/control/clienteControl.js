@@ -2,8 +2,11 @@ const connection = require("./connection");
 
 const getAll = async (request, response) => {
   try {
-    const clientes = await connection.execute(`SELECT * FROM clientes`);
-    response.status(200).send(clientes);
+    const clientes = await connection.execute(
+      `SELECT * FROM clientes ORDER BY nome`
+    );
+
+    response.status(200).send(clientes[0]);
   } catch (ex) {
     console.error(ex);
     return response
@@ -28,7 +31,24 @@ const postCliente = (request, response) => {
   }
 };
 
+const deleteCliente = (request, response) => {
+  try {
+
+    connection.execute(`DELETE FROM clientes WHERE id = ${request.query.id}`);
+    return response.status(200).send("Cliente deletado.");
+
+  } catch (ex) {
+
+    console.error(ex);
+    return response
+      .status(500)
+      .send("Ocorreu um erro interno apagar o clientes.");
+  
+    }
+};
+
 module.exports = {
   getAll,
   postCliente,
+  deleteCliente,
 };
