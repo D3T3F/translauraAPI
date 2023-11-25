@@ -43,9 +43,23 @@ USE your_db;
 
 CREATE TABLE clientes (
     id int NOT NULL AUTO_INCREMENT,
-    nome varchar(100) NOT NULL,
-    telefone varchar(20) NOT NULL,
-    cep varchar(15) NOT NULL,
-    mensalidade float NOT NULL
+    nome varchar(100),
+    telefone varchar(20),
+    cep varchar(15),
+    mensalidade float,
+    PRIMARY KEY (id)
 );
+
+CREATE TABLE admin (
+    id int NOT NULL AUTO_INCREMENT,
+    login varchar(45),
+    senha varchar(200),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO admin (login, senha) VALUES ('admin', 'e76824a5b39fdb835f77e34ae044a26f9038f6b03e59353a673a778b519963ad5b4ed471be92d8c7580e76ec88dc0f672dac494ceeb718c4ea8f04fdfb280d6e');
+
+CREATE USER your_user@localhost IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON your_db.* TO your_user@localhost;
+FLUSH PRIVILEGES;
 ```
