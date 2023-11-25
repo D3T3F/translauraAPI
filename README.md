@@ -64,4 +64,4 @@ GRANT ALL PRIVILEGES ON your_db.* TO your_user@localhost;
 FLUSH PRIVILEGES;
 ```
 
-You can insert other admins using the encoding system at "./backend/src/control/loginContol.js".
+You can insert other admins using the encoding system at [loginContol.js](https://github.com/D3T3F/translauraAPI/blob/main/backend/src/control/loginControl.js).
