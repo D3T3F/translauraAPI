@@ -20,4 +20,7 @@ These are all the dependences you will need to excecute the API application.
 Runs the app in the development mode.\
 Open [http://localhost:'port'](http://localhost:3333) to make a request.
 
-In the backend folder, you will need to create a .env file, following the .env.
+
+## Connecting to DataBase
+
+In the backend folder, you will need to create a .env file, following the .env.example
