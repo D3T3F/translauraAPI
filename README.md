@@ -63,3 +63,5 @@ CREATE USER your_user@localhost IDENTIFIED BY 'your_password';
 GRANT ALL PRIVILEGES ON your_db.* TO your_user@localhost;
 FLUSH PRIVILEGES;
 ```
+
+You can insert other admins using the encoding system at "./backend/src/control/loginContol.js".
