@@ -19,7 +19,7 @@ const postCliente = (request, response) => {
   try {
     connection.execute(
       `INSERT INTO clientes(nome, telefone, cep, mensalidade) 
-	  VALUES ('${request.body.nome}', '${request.body.telefone}', '${request.body.cep}', ${request.body.mensalidade})`
+	  VALUES ('${request.body.cliente}', '${request.body.telefone}', '${request.body.cep}', ${request.body.valor})`
     );
 
     return response.status(200).send("Cliente inserido com sucesso!");
@@ -33,18 +33,14 @@ const postCliente = (request, response) => {
 
 const deleteCliente = (request, response) => {
   try {
-
     connection.execute(`DELETE FROM clientes WHERE id = ${request.query.id}`);
     return response.status(200).send("Cliente deletado.");
-
   } catch (ex) {
-
     console.error(ex);
     return response
       .status(500)
       .send("Ocorreu um erro interno apagar o clientes.");
-  
-    }
+  }
 };
 
 module.exports = {
