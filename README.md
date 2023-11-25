@@ -24,3 +24,7 @@ Open [http://localhost:'port'](http://localhost:3333) to make a request.
 ## Connecting to DataBase
 
 In the backend folder, you will need to create a .env file, following the .env.example
+
+``` bash
+
+```
