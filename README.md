@@ -38,4 +38,14 @@ MYSQL_DB=your_database
 To run the application, you need to have working sql database, then you can run this query:
 
 ```bash
+CREATE DATABASE yout_db;
+USE your_db;
+
+CREATE TABLE clientes (
+    id int NOT NULL AUTO_INCREMENT,
+    nome varchar(100) NOT NULL,
+    telefone varchar(20) NOT NULL,
+    cep varchar(15) NOT NULL,
+    mensalidade float NOT NULL
+);
 ```
