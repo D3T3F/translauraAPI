@@ -32,3 +32,10 @@ MYSQL_USER=your_user
 MYSQL_PASSWORD=your_password
 MYSQL_DB=your_database
 ```
+
+## Creating a DataBase
+
+To run the application, you need to have working sql database, then you can run this query:
+
+```bash
+```
